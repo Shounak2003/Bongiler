@@ -1,11 +1,24 @@
 "use strict";
 document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('header');
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > lastScrollTop) {
+            // Scroll down
+            header.classList.add('header-hidden');
+        }
+        else {
+            // Scroll up
+            header.classList.remove('header-hidden');
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
     const installBtn = document.getElementById('install-btn');
     const searchBar = document.getElementById('search-bar');
     const docsContent = document.getElementById('docs-content');
     installBtn.addEventListener('click', () => {
-        alert('Installing Bong Compiler...');
-        // Add installation logic here
+        window.location.href = 'https://github.com/Shounak2003/Bong-Compiler';
     });
     searchBar.addEventListener('input', () => {
         const query = searchBar.value.toLowerCase();

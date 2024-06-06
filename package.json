@@ -1,0 +1,19 @@
+{
+  "name": "bong-compiler-website",
+  "version": "1.0.0",
+  "description": "Website for Bong Compiler",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "http-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "keywords": []
+}

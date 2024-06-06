@@ -1,62 +1,85 @@
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background: transparent; /* Set body background to transparent */
+    box-sizing: border-box;
+    background: rgb(169,221,218);
+    background: linear-gradient(90deg, rgba(169,221,218,1) 0%, rgba(181,232,229,1) 16%, rgba(92,185,204,1) 100%); 
+    color: #333;
+    min-height: 100vh;
 }
 
-.title-bar {
+header {
+    background-color: rgba(0, 0, 0, 0); /* transparent  */
+    color: black;
+    padding: 1em;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.5); /* Change background color with transparency */
-    backdrop-filter: blur(10px); /* Apply blur effect */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    backdrop-filter: blur(10px); /* Optional: Adds a blur effect behind the header */
 }
 
-.title-bar h1 {
+header h1 {
     margin: 0;
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
+    cursor: pointer
 }
 
-.container {
+header a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-left: auto;
+    padding-left: 20px;
+}
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: calc(100vh - 50px);
-    background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(233,233,233,1) 5%, rgba(29,220,253,1) 50%, rgba(252,176,69,1) 100%);
-    color: white;
+    padding: 2em;
 }
 
-.button {
-    padding: 10px 20px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    background-color: #2ecc71;
-    color: white;
-    cursor: pointer;
-}
-
-.documentation {
-    width: 80%;
+#install, #documentation {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2em;
+    margin: 1em 0;
+    width: 100%;
     max-width: 800px;
-    margin-top: 20px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.search-bar {
-    margin-top: 20px;
-    padding: 10px;
-    width: 80%;
-    max-width: 400px;
-    font-size: 16px;
+#install h2, #documentation h2 {
+    margin-top: 0;
+}
+
+#install-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 2em;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#install-btn:hover {
+    background-color: #45a049;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#docs-content h3 {
+    margin-top: 0;
 }

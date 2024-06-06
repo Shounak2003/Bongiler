@@ -41,6 +41,13 @@
             </div>
         </section>
     </main>
-    <script src="dist/scripts.js" type="module"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const installBtn = document.getElementById('install-btn');
+            installBtn.addEventListener('click', () => {
+                window.location.href = 'https://github.com/Shounak2003/Bong-Compiler';
+            });
+        });
+    </script>
 </body>
 </html>

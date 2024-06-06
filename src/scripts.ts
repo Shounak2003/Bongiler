@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('header');
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop) {
+            // Scroll down
+            header.classList.add('header-hidden');
+        } else {
+            // Scroll up
+            header.classList.remove('header-hidden');
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+
     const installBtn = document.getElementById('install-btn') as HTMLButtonElement;
     const searchBar = document.getElementById('search-bar') as HTMLInputElement;
     const docsContent = document.getElementById('docs-content') as HTMLDivElement;

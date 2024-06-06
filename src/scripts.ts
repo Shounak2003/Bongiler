@@ -4,8 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const docsContent = document.getElementById('docs-content') as HTMLDivElement;
 
     installBtn.addEventListener('click', () => {
-        alert('Installing Bong Compiler...');
-        // Add installation logic here
+        window.location.href = 'https://github.com/Shounak2003/Bong-Compiler';
     });
 
     searchBar.addEventListener('input', () => {

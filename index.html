@@ -4,17 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bongiler</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('public/backgroung.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your JPG image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Poppins', sans-serif; /* Use Poppins font for the entire webpage */
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Bongiler</h1>
-        <a href="https://github.com/your-repo-link" target="_blank">GitHub</a>
     </header>
     <main>
         <section id="install">
             <h2>Install Bong Compiler</h2>
             <button id="install-btn">Install Bong Compiler</button>
+        </section>
+        <section id="video-panel">
+            <video width="560" height="315" controls>
+                <source src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </section>
         <section id="documentation">
             <h2>Documentation</h2>

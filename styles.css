@@ -1,11 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins',Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background: rgb(169,221,218);
     background: linear-gradient(90deg, rgba(169,221,218,1) 0%, rgba(181,232,229,1) 16%, rgba(92,185,204,1) 100%); 
-    color: #333;
+    color: #white;
     min-height: 100vh;
 }
 
@@ -24,7 +24,9 @@ header {
 
 header h1 {
     margin: 0;
-    cursor: pointer
+    cursor: pointer;
+    font-size: 32px;
+    color: white;
 }
 
 header a {
@@ -32,14 +34,14 @@ header a {
     text-decoration: none;
     font-size: 1.2em;
     margin-left: auto;
-    padding-left: 20px;
+   /* padding-left: 20px;*/
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2em;
+    /*padding: 2em*/;
 }
 
 #install, #documentation {
@@ -72,7 +74,7 @@ main {
 }
 
 #search-bar {
-    width: 100%;
+    width: 95%;
     padding: 1em;
     margin-bottom: 1em;
     border: 1px solid #ccc;
@@ -82,4 +84,14 @@ main {
 
 #docs-content h3 {
     margin-top: 0;
+}
+
+#video-panel {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2em;
+    margin: 1em 0;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

@@ -45,7 +45,7 @@
 </head>
 <body>
     <header id="header">
-        <h1>Bongiler Documentation</h1>
+        <h1 id="header-title">Bongiler Documentation</h1>
     </header>
     <main>
         <section id="install">
@@ -130,14 +130,17 @@
     <script src="dist/scripts.js" type="module"></script>
     <script>
         let lastScrollTop = 0;
-        let headerHidden = false;
+        let headerRemoved = false;
 
         window.addEventListener('scroll', () => {
             const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-            if (currentScroll > lastScrollTop && !headerHidden) {
-                document.getElementById('header').classList.add('header-hidden');
-                headerHidden = true;
+            if (currentScroll > lastScrollTop && !headerRemoved) {
+                const header = document.getElementById('header');
+                const headerTitle = document.getElementById('header-title');
+                header.parentNode.removeChild(header);
+                headerTitle.parentNode.removeChild(headerTitle);
+                headerRemoved = true;
             }
 
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling

@@ -41,11 +41,18 @@
             font-size: 14px;
             color: white; /* Set footer text color to white */
         }
+        .icon {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2em;
+            margin-right: 0.2em;
+            color: #000; /* Adjust color as needed */
+        }
     </style>
 </head>
 <body>
     <header id="header">
-        <h1 id="header-title">Bongiler Documentation</h1>
+        <h1 id="header-title"><span class="icon">&lt;/&gt;</span>Bongiler Documentation</h1>
     </header>
     <main>
         <section id="install">
@@ -137,9 +144,7 @@
 
             if (currentScroll > lastScrollTop && !headerRemoved) {
                 const header = document.getElementById('header');
-                const headerTitle = document.getElementById('header-title');
                 header.parentNode.removeChild(header);
-                headerTitle.parentNode.removeChild(headerTitle);
                 headerRemoved = true;
             }
 
